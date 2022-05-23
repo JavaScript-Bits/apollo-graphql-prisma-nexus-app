@@ -1,0 +1,32 @@
+{
+    "name": "appolo-graphql-node-ts",
+    "version": "1.0.0",
+    "description": "APollo GraphQL ts sample project",
+    "main": "index.ts",
+    "scripts": {
+        "dev": "ts-node-dev --transpile-only --respawn --no-notify src/server.ts",
+        "build": "tsc",
+        "migrate": "npx prisma migrate dev --schema ./src/prisma/schema.prisma --name init --preview-feature",
+        "prisma-format": "npx prisma format --schema ./src/prisma/schema.prisma",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ts",
+        "apollo",
+        "graphql",
+        "node"
+    ],
+    "author": "jsbits",
+    "devDependencies": {
+        "prisma": "^3.8.1",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.5.5"
+    },
+    "dependencies": {
+        "@prisma/client": "^3.8.1",
+        "apollo-server": "^3.6.2",
+        "graphql": "^15.8.0",
+        "nexus": "^1.1.0"
+    },
+    "license": "MIT"
+}
